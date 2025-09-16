@@ -1,0 +1,24 @@
+<div
+  class="cardListaNomes"
+  style="max-width: 400px; margin: auto; padding: 20px"
+>
+  <h2>Lista de Nomes</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="novoNome"
+    class="inputPadrao"
+    placeholder="Digite um nome"
+    style="margin-bottom: 0.5rem"
+  />
+
+  <button class="botaoPadrao" (click)="adicionarNome()">Adicionar</button>
+
+  <ul></ul>
+  <li *ngFor="let nome of listaNomes; let i = index">
+    {{nome}}
+    <button (click)="removerNome(i)">Remover</button>
+  </li>
+</div>
+
+<button (click)="voltar()">Voltar</button>

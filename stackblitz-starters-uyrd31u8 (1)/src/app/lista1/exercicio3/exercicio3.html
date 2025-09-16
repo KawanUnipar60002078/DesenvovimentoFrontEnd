@@ -1,0 +1,24 @@
+
+<div class="cardReajuste">
+  <h2>Calculadora de reajuste</h2>
+  <div style="margin-bottom: 1rem">
+    <input [(ngModel)] = "number1" 
+    class="inputPadrao"
+      type="number"
+      placeholder="Informe o valor principal"
+      style="margin-bottom: 0.5rem"/>
+
+      <input [(ngModel)] = "number2" 
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o valor do (%)"/>
+  </div>
+  <button class="botaoPadrao" (click)="calcularReajuste()">
+    Somar
+  </button>
+
+  <div *ngIf="resultado !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado: {{ resultado }}
+  </div>
+
+  <button (click)="voltar()">Voltar</button>

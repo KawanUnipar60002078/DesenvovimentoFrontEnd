@@ -1,0 +1,26 @@
+
+<div class="cardMaior">
+  <h2>Comparação de número maior entre 2</h2>
+  <div style="margin-bottom: 2rem">
+    <input [(ngModel)] = "number1" 
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o primeiro valor"
+      style="margin-bottom: 0.5rem"/>
+
+      <input [(ngModel)] = "number2" 
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o segundo valor"
+      style="margin-bottom: 0.5rem"/>
+
+  </div>
+  <button class="botaoPadrao" (click)="calcularMaior()">
+    Somar
+  </button>
+
+  <div *ngIf="resultado !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado da comparação é: {{ resultado }} - {{ mensagem }}
+  </div>
+
+  <button (click)="voltar()">Voltar</button>

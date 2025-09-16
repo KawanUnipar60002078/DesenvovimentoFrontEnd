@@ -1,0 +1,26 @@
+<div class="cardPrincipal">
+  <h2>Degete o valor do produto</h2>
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="numero1"
+      class="inputPadrao"
+      type="number"
+      placeholder="Valor pago"
+      style="margin-bottom: 0.5rem"
+    />
+    <input
+      [(ngModel)]="numero2"
+      class="inputPadrao"
+      type="number"
+      placeholder="valor produto"
+    />
+  </div>
+  <button class="botaoPadrao" (click)="somar()">calcular</button>
+
+  <div *ngIf="resultado !== null" style="margin-top: 1rem; font-weight: bold">
+    troco {{ resultado }}
+  </div>
+</div>
+<button (click)="voltar()">Voltar</button>
+
+

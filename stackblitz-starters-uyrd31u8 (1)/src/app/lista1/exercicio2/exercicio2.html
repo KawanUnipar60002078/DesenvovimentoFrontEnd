@@ -1,0 +1,25 @@
+<div class="cardQuilo">
+  <h2>Calculadora de quilo</h2>
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="number1"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o valor do quilo"
+      style="margin-bottom: 0.5rem"
+    />
+    <input
+      [(ngModel)]="number2"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe a quantidade de quilos"
+    />
+  </div>
+  <button class="botaoPadrao" (click)="calcularQuilo()">Somar</button>
+
+  <div *ngIf="resultado !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado: {{ resultado }}
+  </div>
+</div>
+
+<button (click)="voltar()">Voltar</button>

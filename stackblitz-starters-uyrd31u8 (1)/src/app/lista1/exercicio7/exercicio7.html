@@ -1,0 +1,20 @@
+
+<div class="cardImpar">
+<h2>Comparação de impar ou par</h2>
+<div style="margin-bottom: 2rem">
+  <input [(ngModel)] = "number1" 
+    class="inputPadrao"
+    type="number"
+    placeholder="Informe o valor"
+    style="margin-bottom: 0.5rem"/>
+
+</div>
+<button class="botaoPadrao" (click)="calcularImparOuPar()">
+  Somar
+</button>
+
+<div *ngIf="resultado !== null" style="margin-top: 1rem; front-weight: bold">
+  Resultado da comparação é: {{ resultado }}
+</div>
+
+<button (click)="voltar()">Voltar</button>

@@ -1,0 +1,42 @@
+<div class="cardMedia">
+  <h2>Calculadora de médias</h2>
+  <div style="margin-bottom: 2rem">
+    <input [(ngModel)] = "number1" 
+    class="inputPadrao"
+      type="number"
+      placeholder="Informe o primeiro valor"
+      style="margin-bottom: 0.5rem"/>
+
+      <input [(ngModel)] = "number2" 
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o segundo valor"
+      style="margin-bottom: 0.5rem"/>
+
+      <input [(ngModel)] = "number3"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o terceiro valor"/>
+
+  </div>
+  <button class="botaoPadrao" (click)="calcularMedia()">
+    Somar
+  </button>
+
+  <div *ngIf="resultadoMedia !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado média: {{ resultadoMedia }}
+  </div>
+
+  <div *ngIf="resultadoPonderada !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado ponderada: {{ resultadoPonderada }}
+  </div>
+
+  <div *ngIf="resultadoSomaMedias !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado soma das médias: {{ resultadoSomaMedias }}
+  </div>
+
+  <div *ngIf="resultadoMediaDasMedias !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado médias das médias: {{ resultadoMediaDasMedias }}
+  </div>
+
+  <button (click)="voltar()">Voltar</button>

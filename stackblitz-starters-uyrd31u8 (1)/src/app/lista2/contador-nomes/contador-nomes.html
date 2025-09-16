@@ -1,0 +1,28 @@
+<div
+  class="cardContadorNomes"
+  style="max-width: 400px; margin: auto; padding: 20px"
+>
+  <div>
+    <h2>Contador de Nomes</h2>
+
+    <input
+      type="text"
+      [(ngModel)]="novoNome"
+      placeholder="Digite um nome"
+      class="inputPadrao"
+      style="margin-bottom: 0.5rem"
+    />
+    <button class="botaoPadrao" (click)="adicionarNome()">Adicionar</button>
+
+    <ul>
+      <li *ngFor="let nome of listaNomes; let i = index">
+        {{ nome }}
+        <button (click)="removerNome(i)">Remover</button>
+      </li>
+    </ul>
+
+    <p><strong>Total de nomes:</strong> {{ totalNomes }}</p>
+  </div>
+</div>
+
+<button (click)="voltar()">Voltar</button>

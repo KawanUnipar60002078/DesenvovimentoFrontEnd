@@ -1,0 +1,33 @@
+<div
+  class="cardListaNumeros"
+  style="max-width: 400px; margin: auto; padding: 20px"
+>
+  <h2>Lista de Números</h2>
+
+  <input
+    type="number"
+    [(ngModel)]="novoNumero"
+    placeholder="Digite um número"
+    class="inputPadrao"
+    style="margin-bottom: 0.5rem"
+  />
+
+  <button class="botaoPadrao" (click)="adicionarNumero()">
+    Adicionar Número
+  </button>
+
+  <ul>
+    <li
+      *ngFor="let numero of listaNumeros; let i = index"
+      style="margin-top: 1rem; front-weight: bold"
+    >
+      {{ numero }}
+      <button (click)="removerNumero(i)">Remover</button>
+    </li>
+  </ul>
+
+  <p><strong>Soma:</strong> {{ soma }}</p>
+  <p><strong>Média:</strong> {{ media }}</p>
+</div>
+
+<button (click)="voltar()">Voltar</button>

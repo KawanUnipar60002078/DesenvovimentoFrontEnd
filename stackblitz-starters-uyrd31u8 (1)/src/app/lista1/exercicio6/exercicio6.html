@@ -1,0 +1,37 @@
+<div class="cardMenor">
+  <h2>Comparação menor valor entre 4 números</h2>
+  <div style="margin-bottom: 2rem">
+    <input [(ngModel)] = "number1" 
+    class="inputPadrao"
+      type="number"
+      placeholder="Informe o primeiro valor"
+      style="margin-bottom: 0.5rem"/>
+
+      <input [(ngModel)] = "number2" 
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o segundo valor"
+      style="margin-bottom: 0.5rem"/>
+
+      <input [(ngModel)] = "number3"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o terceiro valor"
+      style="margin-bottom: 0.5rem"/>
+
+      <input [(ngModel)] = "number4"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o quarto valor"
+      style="margin-bottom: 0.5rem"/>
+
+  </div>
+  <button class="botaoPadrao" (click)="calcularMenor()">
+    Somar
+  </button>
+
+  <div *ngIf="resultado !== null" style="margin-top: 1rem; front-weight: bold">
+    Resultado da comparação é: {{ resultado }}
+  </div>
+
+  <button (click)="voltar()">Voltar</button>
